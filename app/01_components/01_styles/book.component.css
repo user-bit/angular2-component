@@ -1,0 +1,23 @@
+/* С помощью псевдо класса :host можно изменить стили элемента, в котором находится компонент */
+:host {
+    display: block;
+    border: 1px solid black;
+    margin: 8px 0 8px 0;
+    padding: 8px;
+}
+
+:host-context(.theme-red) h2 {
+    color: red;
+}
+
+:host-context(.theme-green) h2 {
+    color:green;
+}
+
+p {
+    font-style: italic;
+}
+
+:host /deep/ p {
+    text-decoration: underline;
+}
